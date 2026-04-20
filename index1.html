@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Заработок на свадебной полиграфии из дома — Красная Печать</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #fff; }
+
+.hero { background: linear-gradient(135deg, #fbeaf0 0%, #f4c0d1 100%); padding: 60px 24px 48px; text-align: center; }
+.hero-tag { display: inline-block; background: #D4537E; color: #fff; font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 20px; margin-bottom: 18px; letter-spacing: 0.05em; }
+.hero h1 { font-size: 32px; font-weight: 600; color: #4B1528; line-height: 1.25; margin-bottom: 16px; }
+.hero p { font-size: 16px; color: #713040; line-height: 1.7; max-width: 560px; margin: 0 auto 32px; }
+.hero-btn { display: inline-block; background: #D4537E; color: #fff; font-size: 17px; font-weight: 600; padding: 16px 40px; border-radius: 50px; cursor: pointer; border: none; text-decoration: none; }
+.hero-btn:hover { background: #993556; }
+
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 32px 24px; background: #fff; border-bottom: 1px solid #f0e0e5; }
+.badge { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #666; background: #fafafa; border: 1px solid #f0e0e5; padding: 6px 14px; border-radius: 20px; }
+.badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #D4537E; flex-shrink: 0; }
+
+.about { max-width: 680px; margin: 0 auto; padding: 48px 24px; display: flex; gap: 24px; align-items: flex-start; }
+.about-logo { width: 64px; height: 64px; border-radius: 50%; background: #D4537E; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.about-text h3 { font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+.about-text p { font-size: 14px; color: #666; line-height: 1.7; margin-bottom: 16px; }
+.social-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.social-btn { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 500; padding: 7px 16px; border-radius: 20px; text-decoration: none; border: 1px solid #ddd; color: #333; background: #fafafa; }
+.social-btn:hover { border-color: #D4537E; color: #D4537E; }
+.social-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.photo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 24px 32px; max-width: 680px; margin: 0 auto; }
+.photo-wrap { border-radius: 12px; overflow: hidden; border: 1px solid #f0e0e5; height: 160px; background: #fbeaf0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; }
+.photo-wrap .icon { font-size: 32px; }
+.photo-wrap .label { font-size: 11px; color: #D4537E; }
+
+.for-who { background: #fafafa; }
+.for-who-inner { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
+.section-label { font-size: 12px; font-weight: 600; color: #D4537E; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
+.who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.who-card { background: #fff; border: 1px solid #f0e0e5; border-radius: 12px; padding: 20px 16px; text-align: center; }
+.who-icon { font-size: 26px; margin-bottom: 10px; }
+.who-card p { font-size: 13px; color: #666; line-height: 1.5; }
+
+.section { padding: 48px 24px; max-width: 680px; margin: 0 auto; }
+.lesson-list { display: flex; flex-direction: column; gap: 12px; }
+.lesson { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid #f0e0e5; border-radius: 12px; padding: 18px 20px; }
+.lesson-num { width: 36px; height: 36px; border-radius: 50%; background: #fbeaf0; color: #D4537E; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.lesson-title { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+.lesson-desc { font-size: 13px; color: #666; line-height: 1.55; }
+
+.included { background: #fafafa; }
+.included-inner { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
+.inc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.inc-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: #1a1a1a; }
+.inc-check { width: 20px; height: 20px; border-radius: 50%; background: #D4537E; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+
+.cta-section { padding: 56px 24px; text-align: center; background: #fff; }
+.cta-section h2 { font-size: 26px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+.cta-section > p { font-size: 16px; color: #666; margin-bottom: 10px; }
+.price-box { display: inline-block; margin: 24px auto; }
+.price-label { font-size: 13px; color: #666; margin-bottom: 4px; }
+.price-val { font-size: 42px; font-weight: 700; color: #D4537E; }
+.price-note { font-size: 13px; color: #666; margin-top: 4px; }
+/* ============================================================
+   ССЫЛКА НА ОПЛАТУ — замени # на свою ссылку от Робокассы
+   ============================================================ */
+.pay-btn { display: inline-block; background: #D4537E; color: #fff; font-size: 18px; font-weight: 600; padding: 18px 52px; border-radius: 50px; cursor: pointer; border: none; margin-top: 8px; text-decoration: none; }
+.pay-btn:hover { background: #993556; }
+.pay-sub { font-size: 12px; color: #999; margin-top: 12px; }
+
+.footer { background: #fafafa; border-top: 1px solid #f0e0e5; padding: 32px 24px; text-align: center; }
+.footer p { font-size: 13px; color: #666; margin-bottom: 16px; }
+.footer-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+.oferta-wrap { border-top: 1px solid #f0e0e5; max-width: 680px; margin: 0 auto; padding: 0 24px; }
+.oferta-toggle { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; border: none; background: none; width: 100%; text-align: left; }
+.oferta-toggle span { font-size: 13px; color: #999; }
+.oferta-toggle .arrow { font-size: 11px; color: #999; transition: transform 0.2s; }
+.oferta-body { display: none; padding-bottom: 32px; }
+.oferta-body.open { display: block; }
+.oferta-body h3 { font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 18px 0 6px; }
+.oferta-body p { font-size: 12px; color: #666; line-height: 1.7; margin-bottom: 6px; }
+.requisites { background: #fafafa; border-radius: 8px; padding: 14px 16px; margin-top: 16px; font-size: 12px; color: #666; line-height: 1.9; }
+.divider { height: 1px; background: #f0e0e5; }
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 24px; }
+  .about { flex-direction: column; }
+  .photo-strip { grid-template-columns: repeat(3, 1fr); }
+  .who-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">Онлайн-курс от Красной Печати</div>
+  <h1>Заработок на свадебной полиграфии из дома</h1>
+  <p>Реальная профессия без начальников, дедлайнов и офиса. Не требует изменения образа жизни — работаешь когда удобно, зарабатываешь на красивом.</p>
+  <a class="hero-btn" href="#cta">Купить курс</a>
+</div>
+
+<div class="badges">
+  <div class="badge"><div class="badge-dot"></div>Без опыта в дизайне</div>
+  <div class="badge"><div class="badge-dot"></div>Работа из дома</div>
+  <div class="badge"><div class="badge-dot"></div>Без больших вложений</div>
+  <div class="badge"><div class="badge-dot"></div>Реальный доход</div>
+  <div class="badge"><div class="badge-dot"></div>4 урока — и старт</div>
+</div>
+
+<div class="about">
+  <div class="about-logo">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+      <rect x="4" y="8" width="26" height="18" rx="3" fill="white" opacity="0.9"/>
+      <rect x="8" y="12" width="10" height="2" rx="1" fill="#D4537E"/>
+      <rect x="8" y="16" width="18" height="1.5" rx="0.75" fill="#F4C0D1"/>
+      <rect x="8" y="19" width="14" height="1.5" rx="0.75" fill="#F4C0D1"/>
+      <circle cx="24" cy="13" r="3" fill="#fbeaf0" stroke="#D4537E" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="about-text">
+    <h3>Красная Печать — специалисты по свадебной полиграфии</h3>
+    <p>Мы занимаемся свадебной полиграфией и знаем эту нишу изнутри. Теперь запускаем собственное обучение, чтобы каждая желающая могла освоить эту профессию и зарабатывать из дома.</p>
+    <div class="social-links">
+      <a class="social-btn" href="https://instagram.com/redstamp55" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        @redstamp55
+      </a>
+      <a class="social-btn" href="https://t.me/redstamp55" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M21 5L2 12.5l7 1M21 5l-5 15-4.5-5.5M21 5L9 13.5m0 0L9.5 19.5l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Telegram
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="photo-strip">
+  <div class="photo-wrap"><div class="icon">💌</div><div class="label">Пригласительные</div></div>
+  <div class="photo-wrap"><div class="icon">🖨️</div><div class="label">Принтер</div></div>
+  <div class="photo-wrap"><div class="icon">✂️</div><div class="label">Сборка</div></div>
+</div>
+
+<div class="for-who">
+  <div class="for-who-inner">
+    <div class="section-label">Для кого</div>
+    <h2>Этот курс создан для вас, если...</h2>
+    <div class="who-grid">
+      <div class="who-card"><div class="who-icon">👶</div><p>Вы в декрете и хотите свой доход</p></div>
+      <div class="who-card"><div class="who-icon">🏠</div><p>Хотите работать из дома без офиса</p></div>
+      <div class="who-card"><div class="who-icon">✨</div><p>Ищете новую профессию с нуля</p></div>
+      <div class="who-card"><div class="who-icon">💰</div><p>Хотите зарабатывать без больших вложений</p></div>
+      <div class="who-card"><div class="who-icon">🔄</div><p>Хотите новый доход, не меняя образ жизни</p></div>
+      <div class="who-card"><div class="who-icon">🎨</div><p>Вам нравится создавать красивое своими руками</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Программа курса</div>
+  <h2>4 урока — и вы готовы работать</h2>
+  <div class="lesson-list">
+    <div class="lesson"><div class="lesson-num">1</div><div><div class="lesson-title">Оборудование</div><div class="lesson-desc">Что нужно, как выбрать и купить не переплачивая. Особенности, обслуживание и нюансы работы с техникой.</div></div></div>
+    <div class="lesson"><div class="lesson-num">2</div><div><div class="lesson-title">Работа в CorelDRAW</div><div class="lesson-desc">Обучение от дизайнера-преподавателя с опытом всей жизни. После урока уверенно работаете в программе. Получаете 10 шаблонов пригласительных и папку из 100 шрифтов.</div></div></div>
+    <div class="lesson"><div class="lesson-num">3</div><div><div class="lesson-title">Сборка пригласительных</div><div class="lesson-desc">Физическая работа со свадебной продукцией. Видите весь процесс от начала до готового изделия вживую.</div></div></div>
+    <div class="lesson"><div class="lesson-num">4</div><div><div class="lesson-title">Продажи и клиенты</div><div class="lesson-desc">Где брать клиентов, как составить объявление, как продавать без страха. После этого урока страх продаж пропадёт. Урок обязателен.</div></div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="included">
+  <div class="included-inner">
+    <div class="section-label">Что входит</div>
+    <h2>Всё, что нужно для старта</h2>
+    <ul class="inc-list">
+      <li><div class="inc-check">✓</div>4 видеоурока с нуля до результата</li>
+      <li><div class="inc-check">✓</div>10 готовых шаблонов пригласительных</li>
+      <li><div class="inc-check">✓</div>Папка с 100 шрифтами для установки</li>
+      <li><div class="inc-check">✓</div>Урок по продажам и поиску клиентов</li>
+      <li><div class="inc-check">✓</div>Обучение CorelDRAW от профессионального дизайнера</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cta-section" id="cta">
+  <div class="section-label">Начать сейчас</div>
+  <h2>Готова начать зарабатывать?</h2>
+  <p>Один раз купила — работаешь сколько хочешь</p>
+  <div class="price-box">
+    <div class="price-label">Стоимость курса</div>
+    <div class="price-val">9 900 ₽</div>
+    <div class="price-note">Доступ навсегда · Все материалы включены</div>
+  </div>
+  <br>
+  <!-- ЗАМЕНИ # НА СВОЮ ССЫЛКУ ОТ РОБОКАССЫ -->
+  <a class="pay-btn" href="#">Оплатить через Робокассу</a>
+  <div class="pay-sub">Безопасная оплата · Мгновенный доступ после оплаты</div>
+</div>
+
+<div class="footer">
+  <p>Остались вопросы? Напишите нам — ответим быстро</p>
+  <div class="footer-links">
+    <a class="social-btn" href="https://instagram.com/redstamp55" target="_blank">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram @redstamp55
+    </a>
+    <a class="social-btn" href="https://t.me/redstamp55" target="_blank">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M21 5L2 12.5l7 1M21 5l-5 15-4.5-5.5M21 5L9 13.5m0 0L9.5 19.5l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Telegram @redstamp55
+    </a>
+  </div>
+</div>
+
+<div style="border-top: 1px solid #f0e0e5;">
+  <div class="oferta-wrap">
+    <button class="oferta-toggle" onclick="toggleOferta()">
+      <span>Публичная оферта — договор информационно-консультативных услуг</span>
+      <span class="arrow" id="arrow">▼</span>
+    </button>
+    <div class="oferta-body" id="oferta-body">
+      <h3>1. Общие положения</h3>
+      <p>В настоящей Публичной оферте содержатся условия заключения Договора информационно-консультативных услуг. Совершение указанных в настоящей Оферте действий является подтверждением согласия обеих Сторон заключить Договор на условиях, в порядке и объеме, изложенных в настоящей Оферте. Договор считается заключённым с момента совершения Сторонами предусмотренных действий — безоговорочного и полного принятия всех условий настоящей Оферты.</p>
+      <h3>2. Предмет договора</h3>
+      <p>Исполнитель обязуется оказать Заказчику информационно-консультационные услуги, а Заказчик обязуется оплатить их в размере, порядке и сроки, установленные настоящим Договором. Акцепт Оферты выражается в оплате услуг Заказчиком.</p>
+      <h3>3. Права и обязанности сторон</h3>
+      <p>Исполнитель обязан оказать услуги в согласованные сроки и с надлежащим качеством. Заказчик обязан своевременно произвести оплату и предоставить необходимую информацию. Заказчик вправе контролировать ход оказания услуг, не вмешиваясь в деятельность Исполнителя.</p>
+      <h3>4. Цена и порядок расчётов</h3>
+      <p>Стоимость услуг устанавливается на сайте Исполнителя. Все расчёты производятся в безналичном порядке.</p>
+      <h3>5. Возврат денежных средств</h3>
+      <p>Возврат осуществляется в соответствии с Законом РФ № 2300-1 «О защите прав потребителей» на основании претензии Заказчика. Срок ответа на претензию — 10 рабочих дней.</p>
+      <h3>6. Конфиденциальность</h3>
+      <p>Стороны обязуются сохранять конфиденциальность информации, полученной в ходе исполнения Договора, в соответствии с ФЗ № 152-ФЗ «О персональных данных».</p>
+      <h3>7. Форс-мажор</h3>
+      <p>Стороны освобождаются от ответственности при наступлении обстоятельств непреодолимой силы. Уведомление — в течение 30 рабочих дней. При продолжении более 60 рабочих дней каждая Сторона вправе расторгнуть Договор.</p>
+      <h3>8. Ответственность сторон</h3>
+      <p>Стороны несут ответственность за неисполнение обязательств в соответствии с условиями настоящей Оферты и законодательством РФ.</p>
+      <h3>9. Срок действия оферты</h3>
+      <p>Оферта вступает в силу с момента размещения на сайте и действует до её отзыва Исполнителем. Договор действует до полного исполнения Сторонами обязательств.</p>
+      <h3>10. Дополнительные условия</h3>
+      <p>Договор регулируется законодательством Российской Федерации. Досудебный претензионный порядок обязателен. Язык договора — русский.</p>
+      <div class="requisites">
+        <strong>Реквизиты исполнителя:</strong><br>
+        Мазнёв Максим Дмитриевич<br>
+        ИНН: 550520684345<br>
+        ОГРНИП: 323554300033565<br>
+        Телефон: +7 999 458-14-08<br>
+        Email: max0796@mail.ru
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleOferta() {
+  const body = document.getElementById('oferta-body');
+  const arrow = document.getElementById('arrow');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+document.querySelector('a[href="#cta"]').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
