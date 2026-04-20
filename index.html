@@ -28,10 +28,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; c
 .social-btn:hover { border-color: #D4537E; color: #D4537E; }
 .social-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-.photo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 24px 32px; max-width: 680px; margin: 0 auto; }
-.photo-wrap { border-radius: 12px; overflow: hidden; border: 1px solid #f0e0e5; height: 160px; background: #fbeaf0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; }
-.photo-wrap .icon { font-size: 32px; }
-.photo-wrap .label { font-size: 11px; color: #D4537E; }
+.photo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 0 24px 40px; max-width: 680px; margin: 0 auto; }
+.photo-wrap { border-radius: 14px; overflow: hidden; border: 1px solid #f0e0e5; height: 200px; }
+.photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+.photo-wrap:hover img { transform: scale(1.04); }
+.photo-label { text-align: center; font-size: 12px; color: #993556; margin-top: 6px; font-weight: 500; }
 
 .for-who { background: #fafafa; }
 .for-who-inner { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
@@ -62,9 +63,6 @@ h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
 .price-label { font-size: 13px; color: #666; margin-bottom: 4px; }
 .price-val { font-size: 42px; font-weight: 700; color: #D4537E; }
 .price-note { font-size: 13px; color: #666; margin-top: 4px; }
-/* ============================================================
-   ССЫЛКА НА ОПЛАТУ — замени # на свою ссылку от Робокассы
-   ============================================================ */
 .pay-btn { display: inline-block; background: #D4537E; color: #fff; font-size: 18px; font-weight: 600; padding: 18px 52px; border-radius: 50px; cursor: pointer; border: none; margin-top: 8px; text-decoration: none; }
 .pay-btn:hover { background: #993556; }
 .pay-sub { font-size: 12px; color: #999; margin-top: 12px; }
@@ -87,7 +85,8 @@ h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
 @media (max-width: 480px) {
   .hero h1 { font-size: 24px; }
   .about { flex-direction: column; }
-  .photo-strip { grid-template-columns: repeat(3, 1fr); }
+  .photo-strip { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .photo-wrap { height: 110px; }
   .who-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
@@ -137,10 +136,22 @@ h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
 
 <div class="divider"></div>
 
+<div style="max-width:680px;margin:0 auto;padding:32px 24px 0;">
+  <div class="section-label">Наши работы</div>
+</div>
 <div class="photo-strip">
-  <div class="photo-wrap"><div class="icon">💌</div><div class="label">Пригласительные</div></div>
-  <div class="photo-wrap"><div class="icon">🖨️</div><div class="label">Принтер</div></div>
-  <div class="photo-wrap"><div class="icon">✂️</div><div class="label">Сборка</div></div>
+  <div>
+    <div class="photo-wrap"><img src="photo1.jpg" alt="Свадебные пригласительные"></div>
+    <div class="photo-label">Пригласительные</div>
+  </div>
+  <div>
+    <div class="photo-wrap"><img src="photo2.jpg" alt="Готовые приглашения"></div>
+    <div class="photo-label">Конверты и печать</div>
+  </div>
+  <div>
+    <div class="photo-wrap"><img src="photo3.jpg" alt="Свадебная полиграфия"></div>
+    <div class="photo-label">Полный комплект</div>
+  </div>
 </div>
 
 <div class="for-who">
@@ -222,7 +233,7 @@ h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
     </button>
     <div class="oferta-body" id="oferta-body">
       <h3>1. Общие положения</h3>
-      <p>В настоящей Публичной оферте содержатся условия заключения Договора информационно-консультативных услуг. Совершение указанных в настоящей Оферте действий является подтверждением согласия обеих Сторон заключить Договор на условиях, в порядке и объеме, изложенных в настоящей Оферте. Договор считается заключённым с момента совершения Сторонами предусмотренных действий — безоговорочного и полного принятия всех условий настоящей Оферты.</p>
+      <p>В настоящей Публичной оферте содержатся условия заключения Договора информационно-консультативных услуг. Договор считается заключённым с момента совершения Сторонами предусмотренных действий — безоговорочного и полного принятия всех условий настоящей Оферты.</p>
       <h3>2. Предмет договора</h3>
       <p>Исполнитель обязуется оказать Заказчику информационно-консультационные услуги, а Заказчик обязуется оплатить их в размере, порядке и сроки, установленные настоящим Договором. Акцепт Оферты выражается в оплате услуг Заказчиком.</p>
       <h3>3. Права и обязанности сторон</h3>
@@ -232,15 +243,15 @@ h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
       <h3>5. Возврат денежных средств</h3>
       <p>Возврат осуществляется в соответствии с Законом РФ № 2300-1 «О защите прав потребителей» на основании претензии Заказчика. Срок ответа на претензию — 10 рабочих дней.</p>
       <h3>6. Конфиденциальность</h3>
-      <p>Стороны обязуются сохранять конфиденциальность информации, полученной в ходе исполнения Договора, в соответствии с ФЗ № 152-ФЗ «О персональных данных».</p>
+      <p>Стороны обязуются сохранять конфиденциальность информации в соответствии с ФЗ № 152-ФЗ «О персональных данных».</p>
       <h3>7. Форс-мажор</h3>
       <p>Стороны освобождаются от ответственности при наступлении обстоятельств непреодолимой силы. Уведомление — в течение 30 рабочих дней. При продолжении более 60 рабочих дней каждая Сторона вправе расторгнуть Договор.</p>
       <h3>8. Ответственность сторон</h3>
       <p>Стороны несут ответственность за неисполнение обязательств в соответствии с условиями настоящей Оферты и законодательством РФ.</p>
       <h3>9. Срок действия оферты</h3>
-      <p>Оферта вступает в силу с момента размещения на сайте и действует до её отзыва Исполнителем. Договор действует до полного исполнения Сторонами обязательств.</p>
+      <p>Оферта вступает в силу с момента размещения на сайте и действует до её отзыва Исполнителем.</p>
       <h3>10. Дополнительные условия</h3>
-      <p>Договор регулируется законодательством Российской Федерации. Досудебный претензионный порядок обязателен. Язык договора — русский.</p>
+      <p>Договор регулируется законодательством РФ. Досудебный претензионный порядок обязателен. Язык договора — русский.</p>
       <div class="requisites">
         <strong>Реквизиты исполнителя:</strong><br>
         Мазнёв Максим Дмитриевич<br>
