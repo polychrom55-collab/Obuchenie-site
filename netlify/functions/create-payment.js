@@ -5,6 +5,9 @@ exports.handler = async function (event, context) {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
+  const body = JSON.parse(event.body || '{}');
+  const customerEmail = body.email || 'customer@example.com';
+
   const shopId = process.env.YUKASSA_SHOP_ID;
   const secretKey = process.env.YUKASSA_SECRET_KEY;
   const idempotenceKey = Date.now().toString();
@@ -13,6 +16,24 @@ exports.handler = async function (event, context) {
     amount: {
       value: "9900.00",
       currency: "RUB",
+    },
+    receipt: {
+      customer: {
+        email: customerEmail,
+      },
+      items: [
+        {
+          description: "Курс: Заработок на свадебной полиграфии из дома",
+          quantity: "1",
+          amount: {
+            value: "9900.00",
+            currency: "RUB",
+          },
+          vat_code: 1,
+          payment_mode: "full_payment",
+          payment_subject: "service",
+        },
+      ],
     },
     confirmation: {
       type: "redirect",
